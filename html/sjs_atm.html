@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>秒啊</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/sjs_global.css">
+	<script type="text/javascript" src='../js/baidu.js'></script>
+	<script type="text/javascript" src="../js/md52.js"></script>
+	<script type="text/javascript" src='../js/allurl.js'></script>
+	<script type="text/javascript" src='../js/ajax.js'></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/sjs_atm.css">
+</head>
+<body>
+<div class="sjs_header clear">
+	<div class="sjs_header_inner">
+		<div class="sjs_header_left clear">
+			<a href="../index.html">
+				<img src="../img/sjs_index/logo.png" alt=""></a>
+		</div>
+		<div class="sjs_header_right clear">
+			<ul class="clear">
+				<li>
+					<a id="pc_user_transaction" href="sjs_transaction_buy.html">交易</a>
+				</li>
+				<li>
+					<a id="pc_user_asset" href="sjs_wallet.html">资产管理</a>
+
+				</li>
+				<li>
+					<a id="pc_user_load" href="sjs_load.html">登陆</a>
+				</li>
+				<li>
+					<a id="pc_user_register" href="sjs_register.html">注册</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="" alt="" class="uu_avtar" id="user_avatar"></a>
+				</li>
+				<li>
+					<a id="release_btn" href="javascript:;">[退出]</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--提现-->
+<div class="sjs_atm_content">
+	<div class="panel-default recharge_top">
+		<div class="panel-body clear">
+			<div class="pull-left">
+				<b>提现金额</b>
+				<span>可提现余额</span> <i id="time_position"></i>
+				<span>元</span>
+			</div>
+			<div class="pull-right">
+				<a type="button" href="javascript:;" data-toggle="modal" data-target="#add_atm">+ 添加提现账户</a>
+			</div>
+		</div>
+	</div>
+	<div class="sjs_atm_content_inner">
+		<form class="form-horizontal" id="atmForm">
+			<div class="form-group scroll_display">
+				<label class="col-sm-2 control-label">选择提现方式</label>
+				<div class="col-sm-9" id="Bank_code">
+					<pre class="clear u_add_bank"><a type="button" href="javascript:;" data-toggle="modal" data-target="#add_atm">+ 添加提现账户</a></pre>
+				</div>
+				<div class="col-sm-7 col-md-offset-2 choose_bank" id="choose_bank"><b></b><i>请选择其他银行卡</i></div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-2 control-label">提现金额</label>
+				<div class="col-sm-9 money">
+					<input id="atm_money" type="text" onkeyup="this.value=this.value.replace(/[^\d.]/g,'')" placeholder="提现金额大于10.00"/>元
+					<span></span>
+					<p for="">注：因支付宝微信充值提现等原因累积收取1%手续费</p>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button id="next_btn" type="button">下一步</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<!--添加账号-->
+
+<!--添加银行卡-->
+<div class="modal fade add_bank_atm" id="add_atm">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<h3>选择提现方式</h3>
+				<p>银行卡类型<b>(预计1-7个工作日到账)</b></p>
+				<ol class="clear bank_atm">
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/zg.png"><i>中国银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/ny.png"><i>中国农业银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/gs.png"><i>中国工商银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/js.png"><i>中国建设银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/jt.png"><i>中国交通银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/zs.png"><i>中国招商银行</i></pre>
+					</li>
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/gd.png"><i>中国光大银行</i></pre>
+					</li>
+				</ol>
+				<p>支付宝<b>(预计1-3个工作日到账)</b></p>
+				<ol class="clear network_money">
+					<li class="col-sm-4">
+						<pre><input type="checkbox"><b></b><img src="../img/atm/zfb.png"><i>支付宝</i></pre>
+					</li>
+				</ol>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+</body>
+<script type="text/javascript" src='../js/jquery/jquery.min.js'></script>
+<script type="text/javascript" src='../js/jquery/bootstrap.min.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery-ui.min.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.page.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.validate.js'></script>
+<script type="text/javascript" src='../js/nicescroll/jquery.nicescroll.js'></script>
+<script type="text/javascript" src='../js/layer/layer.js'></script>
+<script type="text/javascript" src='../js/sjs_landing.js'></script>
+<script type="text/javascript" src='../js/sjs_atm.js'></script>
+</html>

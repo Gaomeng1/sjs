@@ -1,0 +1,341 @@
+body {
+	background: #f5f5f5;
+
+}
+
+pre {
+	background-color: #fff;
+	padding: 0;
+	line-height: 50px;
+	overflow: visible;
+}
+
+.form-horizontal .form-group {
+	margin: 0;
+}
+
+.form-horizontal .form-group label {
+	font-weight: normal;
+	line-height: 50px;
+	padding: 0;
+}
+
+.modal-content {
+	width: 700px;
+}
+
+/*提现*/
+.sjs_atm_content b {
+	font-size: 18px;
+	color: #333;
+	font-weight: bold;
+	margin-right: 20px;
+}
+
+.sjs_atm_content .recharge_top i {
+	font-size: 12px;
+	color: #FF2D41;
+}
+
+.sjs_atm_content {
+	width: 1200px;
+	height: 70%;
+	margin: 0 auto;
+	margin-top: 20px;
+	background: #fff;
+	border: 1px solid #e5e5e5;
+}
+
+.panel-default.recharge_top {
+	height: 10%;
+}
+
+.panel-default.recharge_top .panel-body {
+	padding: 0 15px;
+	line-height: 300%;
+	overflow: hidden;
+}
+
+.recharge_top {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.recharge_top a {
+	color: #007AFF;
+}
+
+.sjs_atm_content_inner {
+	padding-top: 40px;
+	height: 90%;
+	overflow-x: hidden;
+}
+
+.sjs_atm_content_inner pre i {
+	padding: 0 15px;
+	font-size: 13px;
+}
+
+.sjs_atm_content_inner .money input {
+	margin: 7px 10px 7px 0;
+	width: 180px;
+	line-height: 25px;
+	font-size: 12px;
+	border: 1px solid #e5e5e5;
+	margin-top: 10px;
+}
+
+.sjs_atm_content_inner .money span {
+	color: #FF9500;
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+.sjs_atm_content_inner .money p {
+	font-size: 10px;
+	color: #999;
+	padding-top: 10px;
+}
+
+.sjs_atm_content_inner button {
+	display: inline-block;
+	width: 70px;
+	line-height: 25px;
+	background: #007AFF;
+	color: #fff;
+	border-radius: 2px;
+	margin-top: 30px;
+	text-align: center;
+	border: none;
+	margin-bottom: 20px;
+}
+
+.pull-right {
+	position: relative;
+}
+
+#Bank_code .u_background {
+	display: inline-block;
+	width: 60px;
+	line-height: 25px;
+	color: #fff;
+	text-align: center;
+	background: #007AFF;
+	font-size: 12px;
+	margin-right: 10px;
+	padding: 0;
+}
+
+#Bank_code ul {
+	width: 60px;
+	border: 1px solid #e5e5e5;
+	background: #fff;
+	position: absolute;
+	top: 38px;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+
+#Bank_code ul li {
+	line-height: 25px;
+	text-align: center;
+	color: #007AFF;
+}
+
+#Bank_code pre.active {
+	background: #E9F3FF;
+	border: 1px solid #90C5FF;
+}
+
+#Bank_code pre .pull-right {
+	display: none;
+}
+#Bank_code .u_add_bank a{
+	color: #007AFF;
+	padding-left: 20px;
+}
+
+
+
+.choose_bank {
+	display: none;
+	font-size: 12px;
+	color: #007AFF;
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+.choose_bank b {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	background: url("../img/atm/more.png") no-repeat center left;
+	vertical-align: middle;
+	margin: 0;
+}
+
+/*银行卡弹框*/
+.add_bank_atm h3 {
+	padding-top: 30px;
+	line-height: 30px;
+}
+
+.add_bank_atm p {
+	line-height: 35px;
+	padding-bottom: 10px;
+}
+
+.add_bank_atm p b {
+	color: #999;
+	font-size: 12px;
+}
+
+.add_bank_atm .col-sm-4 {
+	padding-left: 0;
+}
+
+.add_bank_atm pre {
+	line-height: 45px;
+}
+
+.add_bank_atm pre img {
+	margin-right: 10px;
+}
+
+.add_bank_atm pre b, .sjs_atm_content_inner pre b {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	margin: 0 10px;
+	background: url("../img/atm/check.png") no-repeat;
+	vertical-align: middle;
+}
+
+.add_bank_atm pre b.active, .sjs_atm_content_inner pre b.active {
+	background: url("../img/atm/checked.png") no-repeat;
+}
+
+.add_bank_atm input {
+	display: none;
+}
+
+/*添加银行卡   sjs_add_bank*/
+.sjs_add_content_inner .add_bank_atm pre {
+	border: 1px solid #e5e5e5;
+}
+
+.sjs_add_content_inner .add_bank_atm pre img {
+	margin: 0;
+}
+
+.sjs_add_content_inner .add_information input {
+	margin: 7px 10px 7px 0;
+	width: 80%;
+	line-height: 35px;
+	font-size: 12px;
+	border: 1px solid #e5e5e5;
+}
+
+.sjs_add_content_inner .add_information span {
+	color: #FF2D41;
+	font-size: 12px;
+	margin-left: 20px;
+}
+
+.sjs_add_content_inner .add_information p {
+	font-size: 10px;
+	color: #999;
+	padding-top: 10px;
+}
+
+.sjs_add_content_inner .add_information label {
+	font-size: 12px;
+	color: #FF2D41;
+}
+
+.sjs_add_content_inner button,.m_confirm_center button{
+	width: 70px;
+	line-height: 25px;
+	background: #007AFF;
+	color: #fff;
+	border-radius: 2px;
+	margin-top: 30px;
+	text-align: center;
+	border: none;
+}
+
+/*确认体提现   sjs_confirm_withdrawals.html*/
+.withdrawals_mode {
+	line-height: 50px;
+}
+
+.u_blue {
+	background: #F1F8FF;
+}
+
+.u_withdrawals {
+	padding-top: 40px;
+}
+
+.u_withdrawals i {
+	margin: 0 10px;
+}
+
+.u_withdrawals_money {
+	padding-bottom: 40px;
+}
+.u_withdrawals_money span{
+	color: #FF2D41;
+	margin-right: 20px;
+}
+.u_withdrawals_money i{
+	color: #FF9500;
+	font-size: 12px;
+}
+
+.withdrawals_password {
+	padding-top: 10px;
+}
+
+.withdrawals_password input {
+	float: left;
+	line-height:34px;
+	border:1px solid #e5e5e5;
+	background: none;
+	outline: none;
+	letter-spacing:23px;
+	text-indent: 15px;
+	border-radius: 4px;
+	width:100%;
+	font-size: 14px;
+
+}
+.col-sm-8{
+	overflow: hidden;
+}
+
+.u_width{
+	margin-top: 10px;
+	width:200px;
+	overflow: hidden;
+	float: left;
+	/*background-image: url("../img/atm/password.png");*/
+	/*background-repeat: no-repeat;*/
+}
+.withdrawals_password a {
+	float: left;
+	line-height:35px;
+	color: #007AFF;
+	padding-left: 20px;
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+
+
+
+
+/*添加支付宝账号*/
+.sjs_add_bank,.sjs_aipay_content{
+	display: none;
+}

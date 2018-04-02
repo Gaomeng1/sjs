@@ -1,0 +1,158 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	font-family: '微软雅黑';
+	background: #fff;
+}
+.red{
+	color: #FF2D41;
+}
+
+.green{
+	color: #04C192;
+}
+
+
+.sjs_content{
+	width: 70%;
+	height: 65%;
+	margin: 0 auto;
+}
+.sjs_content_position{
+	height: 80%;
+}
+.main_right_inner_top{
+	width:100%;
+	margin:38px auto 0;
+	background: #F7F9FA;
+	color: #666;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	border:none;
+	padding: 25px 0;
+}
+.main_right_inner_top dl{
+	width: 50%;
+	float: left;
+	text-align: center;
+	overflow: hidden;
+}
+.main_right_inner_top dl dt{
+	vertical-align: top;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+.main_right_inner_top dl dt img{
+	width: 40px;
+	height: 40px;
+}
+.main_right_inner_top dl dt,.main_right_inner_top dl dd{
+	display: inline-block;
+}
+.main_right_inner_top dl dd{
+	text-align: left;
+	line-height: 30px;
+}
+
+#whole_positions{
+	height: 70%;
+}
+
+
+/*  */
+.main_right_inner{
+	background: #F7F9FA;
+	margin-top: 38px;
+	border: 1px solid #e5e5e5;
+	border-top: none;
+}
+.main_right_inner #whole_positions .first_child li{
+	font-size: 12px;
+	line-height: 35px;
+}
+.main_right_inner .clear li{
+	float: left;
+	width: 10%;
+	line-height:50px;
+	text-align: center;
+	font-size: 14px;
+}
+.main_right_inner>ul>li{
+	border-top: 1px solid #E5E5E5;
+}
+.main_right_inner>ul>li+li:hover{
+	background: #fff;
+}
+.main_right_inner .clear li.purchase{
+	width:5.5%;
+}
+.main_right_inner .clear li.border{
+	margin-left:2.5%;
+}
+.main_right_inner .clear li.border a{
+	color: #FF9501;
+	padding-bottom: 3px;
+}
+.blue_border a{
+	color: #007AFF;
+}
+.main_right_inner .clear li.border a:hover{
+	border-bottom: 2px solid #FF9500;
+}
+.main_right_inner .clear li.blue_border a:hover{
+	color: #007AFF;
+	border-bottom: 2px solid #007AFF;
+}
+
+
+
+
+/*  */
+.withdrawsing_inner{
+	/* border:1px solid #e5e5e5; */
+	height: 100%;
+	border: none;
+}
+.withdrawsing_ul:hover{
+	background: #fff;
+}
+.withdrawsing_inner .clear li{
+	width: 11.1%;
+	float: left;
+	background: none;
+}
+.withdrawsing_inner .clear li:hover{
+	background: none;
+}
+.withdrawsing_inner .clear a{
+	border:1px solid #FF2D41;
+	color: #FF2D41;
+	border-radius: 2px;
+	padding: 5px 15px;
+	font-size: 13px; 
+}
+.withdrawsing_inner .clear a:hover{
+	border:1px solid #339933;
+	color: #339933;
+}
+
+
+
+/*  */
+.entrust_inner{
+	height: 100%;
+}
+.entrust_inner .clear li{
+	width: 14.25%;
+}
+.main_right_inner .Hot_service{
+	height: 100%;
+	overflow: hidden;
+}
+.main_right_inner .Hot_service ul:hover{
+		
+}
+.main_right_inner .Hot_service ul li{
+	line-height: normal;
+	padding: 1.7% 0;
+}

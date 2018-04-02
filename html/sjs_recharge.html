@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<title>秒啊</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/sjs_global.css">
+	<link rel="stylesheet" href="../css/sjs_wallet.css">
+	<link rel="stylesheet" href="../css/reset.css">
+	<script type="text/javascript" src='../js/baidu.js'></script>
+	<script type="text/javascript" src='../js/ajax.js'></script>
+	<script type="text/javascript" src="../js/md52.js"></script>
+	<script type="text/javascript" src='../js/allurl.js'></script>
+</head>
+<body>
+<div class="sjs_header clear">
+	<div class="sjs_header_inner">
+		<div class="sjs_header_left clear">
+			<a href="../index.html">
+				<img src="../img/sjs_index/logo.png" alt=""></a>
+		</div>
+		<div class="sjs_header_right clear">
+			<ul class="clear">
+				<li>
+					<a id="pc_user_transaction" href="sjs_transaction_buy.html">交易</a>
+				</li>
+				<li>
+					<a id="pc_user_asset" href="sjs_wallet.html">资产管理</a>
+				</li>
+				<li>
+					<a id="pc_user_load" href="sjs_load.html">登陆</a>
+				</li>
+				<li>
+					<a id="pc_user_register" href="sjs_register.html">注册</a>
+				</li>
+				<li>
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="" alt="" class="uu_avtar" id="user_avatar"></a>
+				</li>
+				<li>
+					<a id="release_btn" href="javascript:;">[退出]</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!-- 充值 -->
+<div class="sjs_recharge_content">
+	<!-- 获取二维码 -->
+	<div class="sjs_recharge_content_inner">
+		<div class="panel panel-default recharge_top">
+			<div class="panel-body"><b>充值到我的钱包</b>
+				<span>余额</span> <i></i>
+				<span>元</span>
+			</div>
+		</div>
+		<!-- 充值 -->
+		<div class="panel panel-default recharge_inner">
+			<form action="" id="rechargeForm" method="POST" target="test">
+				<div class="form-group clear">
+					<label for="" class=" text-right col-sm-2 control-label">充值金额：</label>
+					<div class="col-sm-3 text-gold u_recharge_money">
+						<input id="rechargeMoney" name="rechargeMoney" type="text" placeholder="请输入金额"
+							   onkeyup="value=value.replace(/[^\d.]/g,'')">元
+					</div>
+				</div>
+				<div class="form-group clear">
+					<label for="" class=" text-right col-sm-2 control-label">选择充值额度：</label>
+					<div class="col-sm-8 text-gold u_choose_money">
+						<a href="javascript:;" type="button">1元</a>
+						<a href="javascript:;" type="button">10元</a>
+						<a href="javascript:;" type="button">100元</a>
+						<a href="javascript:;" type="button">1000元</a>
+						<a href="javascript:;" type="button">10000元</a>
+						<a href="javascript:;" type="button">30000元</a>
+					</div>
+				</div>
+				<div class="form-group clear">
+					<label for="" class=" text-right col-sm-2 control-label">支付方式：</label>
+					<div class="col-sm-3 text-gold">
+						<!--<label class="payment_label">-->
+						<!--<input type="radio" name="paymethod" value="0" class="choose_coupon check" checked="checked"> <i class="active"></i>-->
+						<!--<img src="../img/sjs_recharge/wx.png" alt=""></label>-->
+						<label class="payment_label">
+							<input type="radio" checked="checked" name="paymethod" value="1"
+								   class="choose_coupon check">
+							<i class="active"></i>
+							<img src="../img/sjs_recharge/zfb.png" alt=""></label>
+					</div>
+				</div>
+				<div class="form-group clear">
+					<label for="" class=" text-right col-sm-2 control-label"></label>
+					<div class="col-sm-8 text-gold u_next">
+						<a href="javascript:;" type="button" id="u_recharge">下一步</a>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- 扫描二维码支付 -->
+	<div class="recharge_payment_inner">
+		<div class="panel panel-default recharge_top">
+			<div class="panel-body"><b>充值到我的钱包</b>
+				<span>充值余额</span>
+				<i></i>
+				<span>元</span>
+			</div>
+		</div>
+		<!-- 充值 -->
+		<div class="panel panel-default recharge_payment">
+			<div class="panel-body">
+				<img src="" alt="">
+
+				<div class="qrcode_bottom_png"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 充值成功 -->
+	<div class="rechargeSuccess">
+		<img src="../img/asset/recharge.png" alt="">充值成功
+	</div>
+</div>
+
+
+<div id="code"></div>
+
+</body>
+<script type="text/javascript" src='../js/jquery/jquery.min.js'></script>
+<script type="text/javascript" src='../js/jquery/bootstrap.min.js'></script>
+<script type="text/javascript" src='../js/jquery/pageload.js'></script>
+<script type="text/javascript" src='../js/layer/layer.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.page.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.validate.js'></script>
+<script type="text/javascript" src='../js/sjs_landing.js'></script>
+<script type="text/javascript" src='../js/sjs_recharge2.js'></script>
+<script type="text/javascript" src='../js/nicescroll/jquery.nicescroll.js'></script>
+</html>

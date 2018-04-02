@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Simple, easy, customisable autocomplete plugin (one more alternative).">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate">
+	<meta HTTP-EQUIV="expires" CONTENT="0">
+	<title>秒啊</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/sjs_global.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+	<script type="text/javascript" src='../js/baidu.js'></script>
+	<script type="text/javascript" src='../js/ajax.js'></script>
+	<script type="text/javascript" src="../js/md52.js"></script>
+	<script type="text/javascript" src='../js/allurl.js'></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/sjs_transaction.css"></head>
+<body>
+	<div class="sjs_header clear">
+		<div class="sjs_header_inner">
+			<div class="sjs_header_left clear">
+				<a href="../index.html">
+					<img src="../img/sjs_index/logo.png" alt=""></a>
+			</div>
+			<div class="sjs_header_right clear">
+				<ul class="clear">
+					<li>
+						<a class="active" id="pc_user_transaction" href="sjs_transaction_buy.html">交易</a>
+					</li>
+					<li>
+						<a id="pc_user_asset" href="sjs_wallet.html">资产管理</a>
+
+					</li>
+					<li>
+						<a id="pc_user_load" href="sjs_load.html">登陆</a>
+					</li>
+					<li>
+						<a id="pc_user_register" href="sjs_register.html">注册</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="" alt="" class="uu_avtar" id="user_avatar"></a>
+					</li>
+					<li>
+						<a id="release_btn" href="javascript:;">[退出]</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="transaction_tab">
+		<div class="transaction_tab_inner">
+			<a href="sjs_transaction_buy.html" role="button">买入</a>
+			<a href="sjs_transaction_sell.html" role="button">卖出</a>
+			<a href="sjs_transaction_entrust.html" class="active" role="button">委托</a>
+		</div>
+	</div>
+	<div class="sjs_content sjs_transaction_content clear">
+		<div class="transaction_entrust">
+			<div class="entrust_nav">
+				<label>
+					<input class="entrust_nav_check check" checked="checked" type="checkbox"> <b class="check_button active"></b>
+					<span>只显示可撤委托</span>
+				</label>
+				<a href="javascript:;" class="button">撤单</a>
+			</div>
+			<div class="entrust_inner" id="nav_entrust_contaniner">
+				<div class="position_inner_title">
+					<ul>
+						<li>委托日期</li>
+						<li>委托时间</li>
+						<li>发行人代码</li>
+						<li>发行人姓名</li>
+						<li>操作</li>
+						<li>状态</li>
+						<li>委托数量</li>
+						<li>委托价格</li>
+						<li></li>
+					</ul>
+				</div>
+				<div id="nav_entrust_contaniner_scroll" class="position_inner2"></div>
+				<div id="nav_withdraw_contaniner_scroll"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal_open">
+		<dl class="clear">
+			<dt>
+				<img src="../img/transaction/logo.png" alt=""></dt>
+			<dd>
+				<span>提示</span>
+				<p>您的买入委托吴凡（123456）已提交</p>
+			</dd>
+		</dl>
+
+	</div>
+</body>
+
+	<script type="text/javascript" src='../js/jquery/jquery.min.js'></script>
+	<script type="text/javascript" src='../js/jquery/bootstrap.min.js'></script>
+	<script type="text/javascript" src='../js/jquery/pageload.js'></script>
+	<script type="text/javascript" src='../js/echarts-all.js'></script>
+	<script type="text/javascript" src='../js/jquery/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='../js/jquery/jquery.page.js'></script>
+	<script type="text/javascript" src='../js/jquery/jquery.validate.js'></script>
+	<script type="text/javascript" src='../js/nicescroll/jquery.nicescroll.js'></script>
+	<script type="text/javascript" src='../js/layer/layer.js'></script>
+	<script type="text/javascript" src='../js/sjs_landing.js'></script>
+	<script type="text/javascript" src='../js/sjs_transaction_entrust.js'></script>
+
+</html>

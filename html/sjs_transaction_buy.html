@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Simple, easy, customisable autocomplete plugin (one more alternative).">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>秒啊</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/sjs_global.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css">
+	<script type="text/javascript" src='../js/baidu.js'></script>
+	<script type="text/javascript" src='../js/ajax.js'></script>
+	<script type="text/javascript" src="../js/md52.js"></script>
+	<script type="text/javascript" src='../js/allurl.js'></script>
+	<link rel="stylesheet" href="../css/reset.css">
+	<link rel="stylesheet" href="../css/sjs_transaction.css"></head>
+<body>
+	<div class="sjs_header clear">
+		<div class="sjs_header_inner">
+			<div class="sjs_header_left clear">
+				<a href="../index.html">
+					<img src="../img/sjs_index/logo.png" alt=""></a>
+			</div>
+			<div class="sjs_header_right clear">
+				<ul class="clear">
+					<li>
+						<a class="active" id="pc_user_transaction" href="sjs_transaction_buy.html">交易</a>
+					</li>
+					<li>
+						<a id="pc_user_asset" href="sjs_wallet.html">资产管理</a>
+
+					</li>
+					<li>
+						<a id="pc_user_load" href="sjs_load.html">登陆</a>
+					</li>
+					<li>
+						<a id="pc_user_register" href="sjs_register.html">注册</a>
+					</li>
+					<li>
+						<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+							<img src="" alt="" class="uu_avtar" id="user_avatar"></a>
+					</li>
+					<li>
+						<a id="release_btn" href="javascript:;">[退出]</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="transaction_tab">
+		<div class="transaction_tab_inner">
+			<a href="sjs_transaction_buy.html" class="active" role="button">买入</a>
+			<a href="sjs_transaction_sell.html" role="button">卖出</a>
+			<a href="sjs_transaction_entrust.html" role="button">委托</a>
+		</div>
+	</div>
+	<div class="sjs_content sjs_transaction_content clear">
+		<!-- <p class="prompt">现在是非交易时间，您的委托将在开市后进行交易</p>
+	-->
+	<div class="transaction_content_left">
+		<div class="transaction_content_top">
+			<div class="transaction_left_l">
+				<form id="purchaseForm" class="required-validate" action='' method="POST">
+					<ul>
+						<li class="first">买入时间</li>
+						<li>
+							<span>发行人</span>
+							<div class="sjs_button first_button">
+								<input id="code_ipt" name="code_ipt" type="text" placeholder="搜索发行人" />
+								<input type="hidden" name="investorsCode" value="" id="code_ipt_hide"></div>
+						</li>
+						<li>
+							<span>价格</span>
+							<div class="sjs_button">
+								<input id='price_number' name="buyerOrderPrice" type="text" value="" placeholder="元" onkeyup="value=value.replace(/[^\d.]/g,'')">
+								<div class="time_button clear">
+									<button id="price_add" type="button"></button>
+									<button id='price_remove' type="button"></button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span></span> <b id="buy_rise">--</b> <b style="text-align: right;">--</b>
+						</li>
+						<li>
+							<span>时间</span>
+							<div class="sjs_button">
+								<input id="time_number" name="buyerOrderNum" type="text" value='' placeholder="秒" onkeyup="value=value.replace(/[^\d]/g,'')">
+								<div class="time_button clear ">
+									<button id="time_add" type="button"></button>
+									<button id="time_remove" type="button"></button>
+								</div>
+							</div>
+						</li>
+						<li>
+							<span></span> <strong>可买 <i>--</i>
+								秒</strong> 
+						</li>
+						<li class="reset">
+							<a href="javascript:;" class="reset_button">重填</a>
+						</li>
+						<li>
+							<span></span>
+							<button type="submit" id="purchase_buy"  class="sjs_purchase_button">确定买入</button>
+						</li>
+					</ul>
+				</form>
+			</div>
+			<div class="transaction_left_r">
+				<div class="order" id="sjs_right_sell">
+					<ul>
+						<li>
+							卖
+							<b>5</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							卖
+							<b>4</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							卖
+							<b>3</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							卖
+							<b>2</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							卖
+							<b>1</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+				</div>
+				<div class="sell" id="sjs_right_buy">
+					<ul>
+						<li>
+							买
+							<b>1</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							买
+							<b>2</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							买
+							<b>3</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							买
+							<b>4</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+					<ul>
+						<li>
+							买
+							<b>5</b>
+						</li>
+						<li>...</li>
+						<li>...</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="transaction_content_center">
+			<p>
+				<span></span>
+			</p>
+			<div class="top_price">
+				<div class="top_line" id="main_chart"></div>
+				<div class="top_line" id="main_chart2"></div>
+			</div>
+
+		</div>
+	</div>
+	<div class="transaction_content_right">
+		<div class="transaction_right_positions">
+			<div class="position_top clear">
+				<a href="javascript:;" class="pull-left active" role="button">持仓</a>
+				<a href="javascript:;" class="pull-left" role="button">委托</a>
+			</div>
+			<div class="position_inner" id="whole_positions">
+				<div class="position_inner_title">
+					<ul class="first_child">
+						<li>发行人代码</li>
+						<li>发行人姓名</li>
+						<li>持有时间(秒)</li>
+						<li>现价(元)</li>
+						<li>可卖时间(秒)</li>
+						<li>成本(元)</li>
+						<li>盈亏</li>
+						<li>可用余额(元)</li>
+						<li>市值(元)</li>
+					</ul>
+				</div>
+				<div id="whole_positions_scroll"></div>
+			</div>
+			<div class="position_inner" id="entrust_contaniner">
+				<div class="position_inner_title">
+					<ul>
+						<li>委托日期</li>
+						<li>委托时间</li>
+						<li>发行人代码</li>
+						<li>发行人姓名</li>
+						<li>操作</li>
+						<li>状态</li>
+						<li>委托数量</li>
+						<li>委托价格</li>
+						<li></li>
+					</ul>
+				</div>
+				<div id="entrust_contaniner_scroll"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal_open">
+	<dl class="clear">
+		<dt>
+			<img src="../img/transaction/logo.png" alt=""></dt>
+		<dd>
+			<span>提示</span>
+			<p>您的买入委托吴凡（123456）已提交</p>
+		</dd>
+	</dl>
+
+</div>
+
+<!-- 买入 -->
+<div class="modal buy_button fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<form id="submitForm" class="required-validate" action='' method="POST">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							买入委托
+							<button type="button" class="close" data-dismiss="modal">
+								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Close</span>
+							</button>
+						</div>
+						<div class="panel-body">
+							<p>
+								发行人：
+								<b></b>
+								<input type="hidden" name="investorsCode"></p>
+							<p>
+								买入价格：
+								<b></b>
+								<input name="buyerOrderPrice" type="hidden"></p>
+							<p>
+								买入数量：
+								<b></b>
+								<label></label>
+								<input name="buyerOrderNum" type="hidden"></p>
+							<p>
+								支付金额:
+								<b></b>
+							</p>
+							<div class="payment_password">
+								<p>支付密码</p>
+								<p class="input_password">
+									<input type="password" id="passwordBtn" maxlength="6" minlength="6" name="PayWord" onkeyup="value=value.replace(/[^\d]/g,'') "/>
+									<input type="hidden" id="passwordHid" maxlength="6" minlength="6" name="userPayWord"/>
+									<a href="sjs_forget_password_one.html?typeFlag=1&htmlFlag=2">忘记密码</a>
+								</p>
+							</div> <strong>时间交易按千分之三收取交易佣金，买入成本是用户的实际买入成交价加上手续费后的价格 ;如果委托订单没有成交，手续费将自动退回到您的钱包。</strong> 
+							<div style="text-align:center">
+								<button type="submit" id="buyBtn" class="active">确认支付</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+</body>
+
+<script type="text/javascript" src='../js/jquery/jquery.min.js'></script>
+<script type="text/javascript" src='../js/jquery/bootstrap.min.js'></script>
+<script type="text/javascript" src='../js/jquery/pageload.js'></script>
+<script type="text/javascript" src='../js/echarts-all.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery-ui.min.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.page.js'></script>
+<script type="text/javascript" src='../js/jquery/jquery.validate.js'></script>
+<script type="text/javascript" src='../js/nicescroll/jquery.nicescroll.js'></script>
+<script type="text/javascript" src='../js/layer/layer.js'></script>
+<script type="text/javascript" src='../js/sjs_landing.js'></script>
+<script type="text/javascript" src='../js/sjs_transaction_buy.js'></script>
+<script type="text/javascript" src='../js/sjs_transaction_currency.js'></script>
+
+</html>

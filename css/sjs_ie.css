@@ -1,0 +1,22 @@
+.asset_tab2 label{
+	margin: 0;
+	line-height: 30px;
+	display: inline-block;
+	float: left;
+}
+
+.control-label{
+	width: 16.7%;
+}
+.asset_tab2 .col-sm-3{
+	width: 25%;
+	float: left;
+}
+#Determine{
+	line-height: 28px;
+	width: 90px;
+	background: #007AFF;
+	border-radius: 2px;
+	padding: 0;
+	color: #fff;
+}

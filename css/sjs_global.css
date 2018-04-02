@@ -1,0 +1,528 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+*{
+	font-family: '微软雅黑';
+}
+
+/* 改变滚动条颜色 */
+::-webkit-scrollbar{width:0px;}
+::-webkit-scrollbar-thumb{background-color: #fff;}
+::-webkit-scrollbar-thumb:active {background-color:#00aff0;}
+
+
+
+
+/* 首页导航 */
+.sjs_header{
+	width:100%;
+	height: 10%;
+	border-bottom: 1px solid #000;
+	background: #262834;
+	color: #fff;
+	overflow: hidden;
+}
+.sjs_header_inner{
+	width: 1200px;
+	margin: 0 auto;
+}
+.sjs_header .row{
+	margin: 0;
+}
+.sjs_header .sjs_header_left{
+	float: left;
+	width: 30%;
+	text-align: center;
+	padding: 0;
+	height: 100%;
+	position: relative;
+}
+.sjs_header .sjs_header_left a{
+	display: inline-block;
+	overflow: hidden;
+	float: left;
+	height:75px;
+	padding-right:10px;
+	vertical-align: middle;
+	padding-top:4.5%;
+}
+
+.sjs_header .sjs_header_right{
+	float: right;
+	text-align: right;
+	width: 70%;
+}
+.sjs_header .sjs_header_right li{
+	display: inline-block;
+	text-align: center;
+	padding: 0 1%;
+	padding-top: 2%;
+	line-height: 40px;
+	font-size: 13px;
+}
+.sjs_header .sjs_header_right li a{
+	color:#B5B4C2;
+	font-size:14px;
+	display: inline-block;
+}
+.sjs_header .sjs_header_right li.active a,.sjs_header .sjs_header_right li a:hover{
+	color: #008AFF;
+}
+
+#user_avatar{
+	width: 40px;
+	height:40px;
+	/* border: 1px solid #e5e5e5; */
+}	
+
+#release_btn,#user_avatar{
+	display: none;
+}
+
+
+
+
+/* 交易弹框 */
+.modal .modal-dialog{
+	z-index: 10000;
+}
+.btn-group{
+	width: 50%;
+	margin: 0 auto;
+	display: block;
+}
+.modal-open .modal{
+	overflow-y: hidden;
+}
+.modal-dialog{
+	width: auto;
+}
+.modal-content{
+	width: 480px;
+	height: 480px;
+	margin:10% auto;
+}
+
+.sjs_purchase .modal-header{
+	width: 100%;
+	background: #008AFF;
+	text-align: right;
+	overflow: hidden;
+}
+.sjs_purchase .modal-header .btn-group button{
+	background: #343434;
+	color: #fff;
+	border: none;
+	width: 99px;
+	line-height:25px;
+	outline: none;
+}
+.sjs_purchase .modal-header>button{
+	background: none;
+	color: #fff;
+	outline: none;
+	padding: 0;
+	font-size: 20px;
+}
+.sjs_purchase .modal-header button:last-child{
+	border-left: none;
+}
+
+.sjs_purchase .btn-group button:hover,.sjs_purchase .btn-group button.active{
+	background: #000;
+}
+.sjs_modal_top dl{
+	border-bottom: 1px solid #e5e5e5;
+	padding: 10px 0;
+}
+.sjs_modal_top dt{
+	float: left;
+	background: red;
+	width: 45px;
+	height:45px;
+	margin: 5px 15px 0 10px;
+}
+.sjs_modal_top dd{
+	float: left;
+	color: #333;
+}
+.sjs_modal_top dd span{
+	font-size:19px;
+}
+.sjs_modal_top dd b{
+	color: #333;
+	font-size: 16px;
+}
+.sjs_modal_top dd i{
+	font-size: 13px;
+	color: #FE2D42;
+	padding-left: 10px;
+}
+
+
+.sjs_modal_center li{
+	padding-top:20px;
+	position: relative;
+
+}
+.sjs_modal_center span{
+	display: inline-block;
+	width:60px;
+	text-align: left;
+	float: left;
+	line-height: 50px;
+	margin-left: 10px;
+}
+.sjs_modal_center div,.sjs_modal_center b{
+	display: inline-block;
+	width: 78%;
+	height:50px;
+	background: #f5f5f5;
+	line-height: 50px;
+	padding-left: 10px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.sjs_modal_center div{
+	padding: 0;
+}
+.sjs_modal_center .sjs_button{
+	overflow: hidden;
+}
+.sjs_modal_center .sjs_button button{
+	background: none;
+	border: none;
+	color: #008AFF;
+	font-size: 25px;
+	width:20%;
+	outline: none;
+	display: inline-block;
+	float: left;
+}
+.sjs_modal_center .sjs_button input{
+	display: inline-block;
+	width:60%;
+	border: none;
+	background: none;
+	border: none;
+	text-align: center;
+	float: left;
+	outline: none;
+	line-height: 50px;
+}
+.sjs_modal_center .sjs_purchase_button{
+	background:#FF9500;
+	width:100%;
+	line-height:40px;
+	text-align: center;
+	border: none;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 30px;
+}
+
+
+.glyphicon{
+	cursor: pointer;
+	color: #fff;
+	line-height: 36px;
+}
+.glyphicon:hover{
+	color: #fff;
+}
+.purchase_tab2{
+	display: none;
+}
+
+
+
+#purchase_nav_modal .sjs_modal_center .top_ipt input{
+	display: inline-block;
+	width: 78%;
+	height:50px;
+	background: #f5f5f5;
+	line-height: 50px;
+	padding-left: 10px;
+	border-radius: 4px;
+	border: none;
+	outline: none;
+}
+
+#purchase_nav_modal .sjs_modal_center input{
+	width: 60%;
+}
+.purchase_tab,.purchase_nav_tab{
+	width: 80%;
+	margin: 0 auto;
+}
+#purchase_nav_modal .sjs_modal_center .top_ipt{
+	position: relative;
+}
+#purchase_nav_modal .sjs_modal_center .top_ipt input{
+	width: 78%;
+}
+#purchase_nav_modal .sjs_modal_center .top_ipt .code_search{
+	width: 78%;
+	height: 150px;
+	overflow: hidden;
+	position: absolute;
+	left: 60px;
+	background:white;
+	border:1px solid #e5e5e5;
+	top: 100%;
+	z-index: 5;
+	display: none;
+}
+#purchase_nav_modal .sjs_modal_center .top_ipt .code_search p{
+	height: 30px;
+	line-height: 30px;
+	padding-left: 10%;
+}
+#purchase_nav_modal .sjs_modal_center .top_ipt .code_search p:hover{
+	background: #e5e5e5;
+}
+
+
+
+/*搜索框 */
+.sjs_header_left .search{
+	width: 60%;
+	position: relative;
+	background: #fff;
+	border-radius: 2px;
+	color: #000;
+	z-index: 10;
+	text-align: left;
+	display: inline-block;
+	margin-top: 5.2%;
+	font-size: 13px;
+}
+.sjs_header .sjs_header_left input{
+	width: 100%;
+	height:30px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	border: none;
+	border-radius: 4px;
+	color: #000;
+	background: #fff;
+}
+.sjs_header_left .search p{
+	line-height: 25px;
+}
+.autocompleter-item-selected {
+    background: #e5e5e5;
+}
+
+.ui-menu .ui-menu-item a{
+	font-size: 13px;
+}
+.ui-autocomplete.ui-front{
+	z-index: 10000;
+	border: 1px solid #f5f5f5;
+}
+
+
+/*加载条*/
+.load-wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0;
+	left:0;
+	background:transparent;
+}
+#pre-load{
+	position:fixed;
+	top:2px;
+	height:3px;
+	background:#2085c5;
+	transition:opacity .5s linear
+}
+#pre-load span{
+	position:absolute;
+	width:150px;
+	height:3px;
+	-webkit-border-radius:100%;
+	-webkit-box-shadow:#2085c5 1px 0 6px 1px;
+	opacity:1;right:-10px;
+	-webkit-animation:pulse 2s ease-out 0s infinite
+}
+@-webkit-keyframes pulse{30%{opacity:.6}60%{opacity:0}to{opacity:.6}}
+
+
+
+
+
+
+/* 分页器 */
+.pagination{
+	margin-top:50px;
+	width: 100%;
+	text-align: center;
+}
+.tcdPageCode span,.tcdPageCode a{
+	display: inline-block;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #428bca;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+
+/* 交易新添弹框 */
+.buy_button .modal-content{
+	width: 402px;
+	height: auto;
+}
+.buy_button .modal-body{
+	padding: 0;
+}
+.buy_button  .panel-default{
+	margin: 0;
+}
+.buy_button .layui-layer-content,.sell_button .layui-layer-content{
+	padding:20px 20px;
+}
+.buy_button p,.sell_button p{
+	line-height: 35px;
+	padding-left: 17%;
+}
+.input_password{
+	height:55px;
+}
+.sell_button p span{
+	width: 40px;
+}
+.buy_button p b{
+	padding-right: 20px;
+}
+.buy_button p input{
+	width: 200px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #E5E5E5;
+	outline: none;
+}
+.buy_button p a{
+	font-size: 12px;
+	padding-left: 15px;
+	color: #0079FF;
+}
+.buy_button p label{
+	font-size: 12px;
+	color: #FF2D41;
+	line-height: 25px;
+	font-weight: normal;
+	margin: 0;
+}
+.buy_button .panel-body button,.sell_button .panel-body button{
+	width:100px;
+	line-height: 25px;
+	border: none;
+	background: #E5E5E5;
+	color: #666666;
+	text-align: center;
+	margin-right: 10px;
+
+}
+.buy_button .panel-body button.active,.sell_button .panel-body button.active,.alert_modal button.active{
+	background: #007AFF;
+	color: #fff;
+}
+.buy_button strong{
+	display: inline-block;
+	margin: 10px 10% 20px 17%;
+	font-size: 12px;
+	color: #999;
+}
+
+
+
+.alert_modal p{
+	text-align: right;
+}
+.alert_modal p button{
+	width:50px;
+	line-height: 23px;
+	border: none;
+	background: #E5E5E5;
+	color: #666666;
+	text-align: center;
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+
+/*  */
+.alert_modal .layui-layer-content,.Prompt_modal .layui-layer-content{
+	text-align: center;
+	font-size: 16px;
+	position: relative;
+}
+.Prompt_modal .layui-layer-btn{
+	text-align: center;
+}
+.Prompt_modal .layui-layer-btn a{
+	width: 40%;
+	padding: 0;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	margin: 0 7px;
+
+}
+
+
+
+/* tab */
+.transaction_tab{
+	width: 100%;
+	height: 40px;
+	background: #E3E3E3;
+	color: #E3E3E3;
+}
+.transaction_tab_inner{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+.transaction_tab_inner .caret{
+	color: #E3E3E3;
+	position: absolute;
+	top: -4.5px;
+	right: 14%;
+}
+.transaction_tab_inner a{
+	display: inline-block;
+	font-size: 13px;
+	margin: 0 1.3%;
+	padding: 0.8% 7px;
+	color: #999999;
+}
+.transaction_tab_inner a.active{
+	font-weight: bold;
+	color: #000;
+	border-bottom: 2px solid #0079FF;
+}
+.transaction_tab_inner a:hover{
+	color: #000;
+}
+/*  */
+
+.col-sm-12{
+	
+}
+
+

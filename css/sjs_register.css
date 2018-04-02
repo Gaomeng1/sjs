@@ -1,0 +1,271 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	background: #192538;
+	font-size: 14px;
+}
+.main{
+	width: 400px;
+	height: 453px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 	0;
+	bottom: 0;
+	margin: auto;
+}
+/*  */
+.main_top{
+	height: 80px;
+	color: #fff;
+	text-align: center;
+}
+.main_center{
+	height:353px;
+	background: #fff;
+	border-radius: 15px;
+	padding: 0 30px;
+	
+}
+.main_center>div{
+	border-bottom: 2px solid #E5E5E5;
+}
+
+/* 城市 */
+.user_name{
+	padding-top: 40px;
+	position: relative;
+}
+.user_name a{
+	color: #333;
+}
+.main_center span{
+	font-size: 14px;
+	color: #333;
+}
+.user_name .citys{
+	width: 170px;
+	height:180px;
+	border: 1px solid #e5e5e5;
+	position: absolute;
+	background: #fff;
+	right: 0;
+	display: none;
+	overflow-x:hidden;
+	z-index: 1;
+}
+.user_name .citys li{
+	font-size: 12px;
+	color: #333;
+	padding:0 5px;
+	height: 35px;
+}
+.user_name .citys li.active,.user_name .citys li:hover{
+	background: #007AFF;
+}
+.user_name .citys li.active a,.user_name .citys li:hover a{
+	color: #fff;
+}
+.user_name .citys li a{
+	display: inline-block;
+	width: 100%;
+	overflow: hidden;
+	line-height: 35px;
+}
+.user_name .citys li b{
+	float: left;
+}
+.user_name .citys li i{
+	float: right;
+}
+
+
+
+/*  */
+.register_center .formBorder{
+	width: 100%;
+	border-bottom: 1px solid #e5e5e5;
+	margin: 0;
+
+}
+.user_iphone span{
+	display: inline-block;
+	max-width:25%;
+	text-align: center;
+	font-size:14px;
+	border-right: 2px solid #e5e5e5;
+	padding-right: 10px;
+	text-indent: 5px;
+	margin:15px 10px 15px 0;
+}
+.register_center .form-group .borderRight{
+	line-height: 25px;
+	margin-top: 12px;
+	padding: 0;
+	text-align: center;
+	border-right: 1px solid #e5e5e5;
+}
+.register_center .form-group .obtainCode{
+	font-weight: normal;
+	color: #007AFF;
+	line-height: 50px;
+	padding: 0;
+	text-align: center;
+	border: none;
+	background: none;
+	outline: none;
+}
+.register_center .form-group input{
+	width:75%;
+	height: 50px;
+	padding: 0;
+	box-shadow: none;
+}
+.main_center input,.user_name .city_name{
+	display: inline-block;
+	width: 85%;
+	border: none;
+	line-height: 50px;
+	outline: none;
+	font-size: 14px;
+	color: #999999;
+}
+.user_verification input{
+	width: 70%;
+	height: 50px;
+}
+.user_verification span{
+	color: #007AFF;
+	width: 28%;
+	display: inline-block;
+	cursor: pointer;
+	line-height:50px;
+	text-align: right;
+}
+.get_label{
+	height: 35px;
+	padding: 0;
+	color: #c90013;
+	line-height: 35px;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+.main_center .click_load{
+	margin: 0px 0 20px;
+}
+.main_center .agreement div,.click_load div{
+	padding: 0;
+}
+.main_center .agreement .checkbox input{
+	display: none;
+}
+.main_center .agreement .checkbox img{
+	padding-right: 10px;
+}
+.main_center .agreement label{
+	font-weight: normal;
+}
+.main_center .agreement .btnload a{
+
+}
+.main_center .click_load button{
+	width: 100%;
+	line-height: 40px;
+	background: #007AFF;
+	border-radius: 8px;
+	font-size: 16px;
+	color: #fff;
+	border: none;
+	padding: 0;
+}
+.agreement .check_button{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/transaction/check.png) no-repeat;
+	border:none;
+	outline: none;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -2px;
+}
+.agreement .check_button.active{
+	background: url(../img/transaction/checked.png) no-repeat;
+}
+
+
+
+
+
+/* 忘记密码 */
+.password_inner {
+    height: 353px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 50px 30px 0;
+}
+.password_inner .user_iphone{
+	padding-top: 70px;
+}
+.password_inner input{
+	width: 100%;
+	height: 50px;
+    border: none;
+    line-height: 50px;
+    outline: none;
+    text-indent: 10px;
+    font-size: 14px;
+    color: #7D7D7D;
+    box-shadow: none;
+    padding: 0;
+}
+
+#forgetForm label{
+	font-weight: normal;
+	color: #c90013;
+	font-size: 12px;
+	line-height: 25px;
+}
+
+
+
+.password_inner .form-control:focus{
+	box-shadow: none;
+	border:none;
+
+}
+.password_inner .form-group{
+	height: 52px;
+	margin: 0;
+	margin-bottom: 30px;
+	border-bottom: 2px solid #E5E5E5;
+}
+.password_inner .col-sm-12,.password_inner .col-sm-9,.password_inner .col-sm-3{
+	padding: 0;
+
+}
+.password_inner .col-sm-3{
+	text-align: center;
+}
+.password_inner #user_load:hover{
+	color: #fff;
+}
+.user_code a{
+	display: inline-block;
+	font-size: 12px;
+	color: #007AFF;
+	line-height: 50px;
+	
+}
+#next{
+	width: 100%;
+    line-height: 40px;
+    background: #007AFF;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #fff;
+    border: none;
+    padding: 0;
+    margin-top: 10px;
+}

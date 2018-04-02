@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.已报">
+	<title>秒啊</title>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/swiper/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/sjs_global.css">
+	<script type="text/javascript" src='../js/baidu.js'></script>
+	<script type="text/javascript" src='../js/ajax.js'></script>
+	<script type="text/javascript" src='../js/md52.js'></script>
+	<link rel="stylesheet" href="../css/sjs_positions.css"></head>
+	<script type="text/javascript" src='../js/allurl.js'></script>
+	<link rel="stylesheet" href="../css/reset.css">
+<body>
+	<div class="sjs_header clear">
+		<div class="sjs_header_left clear">
+			<a href="../index.html">
+				<img src="../img/sjs_index/logo.png" alt="">
+			</a>
+			<input type="text" value="搜索发行人/代码/全拼">
+		</div>
+		<div class="sjs_header_right clear">
+			<ul class="clear">
+				<li>
+					<a href="" data-toggle="modal" data-target="#purchase_nav_modal">买入</a>
+				</li>
+				<li>
+					<a href="" data-toggle="modal" data-target="#purchase_nav_modal">卖出</a>
+				</li>
+				<li>
+					<a href="sjs_withdrawsingle.html">撤单</a>
+				</li>
+				<li>
+					<a href="sjs_positions.html">持仓</a>
+				</li>
+				<li class="active">
+					<a href="sjs_entrust.html">委托</a>
+				</li>
+				<li>
+					<a id="pc_user_load" href="sjs_load.html">登陆</a>
+				</li>
+				<li>
+					<a id="pc_user_register" href="sjs_register.html">注册</a>
+				</li>
+				<li class="dropdown user_message">
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="" alt="" class="uu_avtar" id="user_avatar"></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+						<li>
+							<a tabindex="-1" href="sjs_recharge.html" id="mine_shop">充值</a>
+						</li>
+						<li class="nav_release_btn">
+							<a tabindex="-1" href="javascript:;" id="release_btn">退出登录</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="sjs_content clear">
+		<div class="main_right_inner withdrawsing_inner">
+			<ul id="withdrawsing_whole">
+				<li>
+					<ul class="clear">
+						<li>代码</li>
+						<li>发行人</li>
+						<li>委托价格</li>
+						<li>委托时间</li>
+						<li>委托量</li>
+						<li>成交量</li>
+						<li>状态</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<!-- 导航的买入卖出 -->
+	<div class="modal sjs_purchase fade" id="purchase_nav_modal" tabindex="-1" role="dialog" aria-labelledby="modal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="btn-group">
+						<button type="button" class="btn btn-default active">买入</button>
+						<button type="button" class="btn btn-default">卖出</button>
+					</div>
+					<a data-dismiss="modal" class="glyphicon glyphicon-remove"></a>
+
+				</div>
+				<div class="modal-body">
+					<div class="purchase_nav_tab purchase_tab1">
+						<div class="sjs_modal_center">
+							<ul>
+								<li>
+									<span>发行人</span>
+									<input type="text" placeholder="午饭"></li>
+								<li>
+									<span>价格</span>
+									<div class="sjs_button">
+										<button id='price_nav_remove'>-</button>
+										<span id='price_nav_number'>19.85</span>
+										<button id="price_nav_add">+</button>
+									</div>
+								</li>
+								<li>
+									<span>时间</span>
+									<div class="sjs_button">
+										<button id="time_nav_remove">-</button>
+										<span id='time_nav_number'>6已报</span>
+										<button id="time_nav_add">+</button>
+									</div>
+								</li>
+								<li>
+									<span></span>
+									单位为秒/最低购买6已报秒
+								</li>
+								<li>
+									<button class="sjs_purchase_button">买入</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="purchase_nav_tab purchase_tab2">
+						<div class="sjs_modal_center">
+							<ul>
+								<li>
+									<span>发行人</span>
+									<input type="text" placeholder="午饭666666"></li>
+								<li>
+									<span>价格</span>
+									<div class="sjs_button">
+										<button id="purchase_sell_remove">-</button>
+										<span id="purchase_sell_number">19.85</span>
+										<button id="purchase_sell_add">+</button>
+									</div>
+								</li>
+								<li>
+									<span>时间</span>
+									<div class="sjs_button">
+										<button id="time_sell_remove">-</button>
+										<span id="time_sell_number">6已报</span>
+										<button id="time_sell_add">+</button>
+									</div>
+								</li>
+								<li>
+									<button class="sjs_purchase_button">卖出</button>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+</body>
+	<script type="text/javascript" src='../js/jquery/jquery-1.11.2.min.js'></script>
+	<script type="text/javascript" src='../js/jquery/bootstrap.min.js'></script>
+	<script type="text/javascript" src='../js/sjs_landing.js'></script>
+	<script type="text/javascript" src='../js/sjs_modal.js'></script>
+	<script type="text/javascript" src='../js/sjs_entrust.js'></script>
+</html>

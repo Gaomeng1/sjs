@@ -1,0 +1,472 @@
+body{
+	background: #F5F5F5;
+	font-size: 12px;
+	font-family: '微软雅黑';
+}
+
+
+
+
+
+.transaction_tab{
+	width: 100%;
+	height: 40px;
+	background: #E3E3E3;
+}
+.sjs_transaction_content{
+	width: 1200px;
+	height: 85%;
+	margin: 0 auto;
+	background: #fff;
+}
+.transaction_tab_inner{
+	width: 1200px;
+	height: 70%;
+	margin: 0 auto;
+}
+.transaction_tab_inner a{
+	display: inline-block;
+	font-size: 14px;
+	margin: 0 26px;
+	padding: 0.8% 7px;
+	color: #999999;
+}
+.transaction_tab_inner a.active{
+	font-weight: bold;
+	color: #000;
+	border-bottom: 2px solid #0079FF;
+}
+.transaction_tab_inner a:hover{
+	color: #000;
+}
+
+
+
+
+
+
+.sjs_transaction_content .prompt{
+	background: #E2E9F0;
+	color: #FF9500;
+	line-height: 25px;
+	text-indent: 20px;
+}
+
+.transaction_content_left{
+	width:373px;
+	height: 100%;
+	float: left;
+	background: #fff;
+	border-right: 1px solid #e5e5e5;
+}
+
+.transaction_content_right{
+	width: 827px;
+	float: left;
+	background: #fff;
+	height: 100%;
+
+}
+
+.transaction_content_top{
+	display: flex;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+/* transaction_left_l */
+.transaction_left_l,.transaction_left_r{
+	flex: 1;
+}
+.transaction_left_l{
+	padding-right: 10px;
+	border-right: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+}
+
+
+
+
+.transaction_left_l .sjs_button{
+	float: left;
+	width:121px;
+}
+.transaction_left_l .first{
+	height: 40px;
+	line-height: 40px;
+	font-size: 15px;
+	color: #FF2D41;
+	font-weight: bold;
+	margin-left: 10px;
+	margin: 0 10px;
+}
+.transaction_left_l input{
+	outline-color: #FF2D41;
+}
+.transaction_left_l .first_button input{
+	width: 100%;
+}
+.transaction_left_l li{
+	overflow: hidden;
+}
+.transaction_left_l li b{
+	display: inline-block;
+	width: 58px;
+	color: #333;
+	line-height: 20px;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+.transaction_left_l li b i{
+	padding-left: 2px;
+	cursor: pointer;
+}
+#purchaseForm strong i{
+	color: #FF2D41;
+}
+#purchase_sell_Form strong i{
+	color: #0079FF;
+}
+.transaction_left_l span{
+	display: inline-block;
+	width: 45px;
+	margin-left: 10px;
+	float: left;
+	margin-top: 5px;
+}
+.transaction_left_l input{
+	width: 121px;
+	border: 1px solid #E5E5E5;
+	line-height: 25px;
+	text-indent: 8px;
+	outline-color: #FF2D41;
+}
+#purchase_sell_Form input{
+	outline-color: #0079FF;
+}
+.transaction_left_l .reset {
+	text-align: right;
+	overflow: hidden;
+}
+.transaction_left_l .reset .reset_button{
+	color: #0079FF;
+	background: none;
+	border: none;
+	outline: none;
+
+}
+.sjs_button{
+	height: 45px;
+}
+.sjs_button label{
+	width: 100%;
+	margin: 0;
+	font-size:10px;
+	color:#c90013;
+	margin:0;
+	line-height:20px;
+	font-weight: normal;
+}
+.sjs_button input{
+	width: 95px;
+	height: 25px;
+	float: left;
+	border: 1px solid #E5E5E5;
+	/* outline: none; */
+}
+.time_button{
+	float: left;
+	width: 26px;
+	border: 1px solid #E5E5E5;
+	border-left: none;
+}
+.time_button button{
+	float: left;
+}
+
+#price_add,#time_add,#purchase_sell_add,#time_sell_add{
+	width:100%;
+	height:12px;
+	background: url('../img/transaction/add.png') no-repeat;
+	border: none;
+	background-position: center;
+	outline: none;
+}
+#price_remove,#time_remove,#time_sell_remove,#purchase_sell_remove{
+	width:100%;
+	height:11px;
+	background: url('../img/transaction/remove.png') no-repeat;
+	border: none;
+	background-position: center;
+	border-top: 1px solid #e5e5e5;
+	outline: none;
+}
+.sjs_purchase_button{
+	width: 121px;
+	background:#FF2D41;
+	line-height: 25px;
+	border: none;
+	color: #fff;
+	border-radius: 2px;
+	outline: none;
+	margin-top: 3px;
+}
+.sjs_purchase_button:active{
+	background: #c90013;
+}
+#sell_out:active{
+	background: #005fc8;
+}
+
+
+
+
+
+#purchase_sell_Form .first{
+	color: #0079FF;
+}
+#sell_out{
+	background: #0079FF;
+}
+
+
+/*transaction_left_r  */
+.transaction_left_r{
+	padding-top:10px;
+}
+.transaction_left_r ul{
+	overflow: hidden;
+	display: flex;
+	margin:5% 0;
+}
+.transaction_left_r li{
+	float: left;
+	flex: 1;
+	text-align: center;
+	cursor: pointer;
+}
+.transaction_left_r .order li b{
+	background: #0079FF;
+}
+.transaction_left_r .sell li b{
+	background: #FF9500;
+}
+
+.transaction_left_r b{
+	display: inline-block;
+	width: 15px;
+	height: 14px;
+	color: #fff;
+	line-height: 14px;
+	text-align: center;
+	margin-left: 4px;
+}
+
+/* transaction_content_center */
+.transaction_content_center p{
+	background: #E2E9F0;
+	line-height: 25px;
+	text-indent: 20px;
+	height:6%;
+}
+.transaction_content_center p span{
+	padding-right: 25px;
+}
+.transaction_content_center p img{
+	vertical-align: middle;
+}
+
+.transaction_right_positions .position_top{
+	background: #F5F5F5;
+	border-bottom: 1px solid #e5e5e5;
+}
+.transaction_right_positions a{
+	display: inline-block;
+	width: 92px;
+	line-height:255%;
+	text-align: center;
+	border-right: 1px solid #F5F5F5;
+}
+.transaction_right_positions img{
+	padding-top: 7px;
+	padding-right: 20px;
+}
+
+.transaction_right_positions a.active,.transaction_right_positions a:hover{
+	background: #fff;
+	color: #437BBC;
+	border-right: 1px solid #e5e5e5;
+}
+
+.transaction_right_positions{
+	height: 100%;
+}
+.position_inner{
+	width: 100%;
+	height: 95%;
+	background: url('../img/transaction/border.png');
+}
+#entrust_contaniner_scroll,#whole_positions_scroll,#nav_entrust_contaniner_scroll,#nav_withdraw_contaniner_scroll{
+	height: 95%;
+	overflow-x:hidden; 
+}
+.position_inner ul{
+	display: flex;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.position_inner li{
+	flex: 1;
+	text-align: center;
+	line-height: 25px;
+}
+.position_inner .position_inner_ul:hover{
+	background: #B7DBFF;
+}
+.position_inner_ul li{
+	color: #437BBC;
+}
+
+.position_inner2{
+	display: none;
+}
+
+
+
+#entrust_contaniner{
+	display: none;
+}
+
+.transaction_entrust{
+	height: 100%;
+}
+.entrust_nav{
+	height: 5%;
+	text-align: right;
+	line-height: 255%;
+}
+.transaction_entrust label{
+	font-weight: normal;
+	margin: 0;
+}
+.entrust_nav label{
+	height: 100%;
+}
+.entrust_nav a{
+	color: #0079FF;
+	padding: 0 1%;
+}
+
+.entrust_inner{
+	height: 95%;
+	border:1px solid #e5e5e5;
+	background-color: #FFFFFF;
+	background-image: url(../img/transaction/border2.png);
+}
+.entrust_inner label{
+	width: 100%;
+}
+
+.transaction_entrust ul{
+	display: flex;
+	border-bottom: 1px solid #e5e5e5;
+}
+.check{
+	display: none;
+}
+.transaction_entrust .check_button{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: url(../img/transaction/check.png) no-repeat;
+	border:none;
+	outline: none;
+	vertical-align: middle;
+	margin-right: 5px;
+	margin-top: -2px;
+}
+.transaction_entrust .check_button.active{
+	background: url(../img/transaction/checked.png) no-repeat;
+}
+.transaction_entrust ul li{
+	flex: 1;
+	text-align: center;
+	line-height: 25px;
+}
+
+
+/*添加样式*/
+
+.entrust_ul_blue li{
+	color: #437BBC;
+}
+
+.entrust_ul_red li{
+	color: #FF2D41;
+}
+
+
+
+/*分时*/
+.transaction_content_center{
+	width: 100%;
+	height:60%; 
+}
+.top_price{
+	overflow: hidden;
+	height:80%;
+}
+.top_data1_left{
+	float: left;
+	overflow: hidden;
+}
+.top_data1_left,.right_price_num{
+	width: 100%;
+}
+
+#main_chart{
+	width: 100%;
+	height:65%;
+}
+#main_chart2{
+	width: 100%;
+	height:35%;
+}
+
+
+
+/*  */
+.modal_open{
+	background: #fff;
+	border: 1px solid #E5E5E5;
+	position: absolute;
+	right: 10px;
+	top: 10%;
+	border-radius: 4px;
+	display: none;
+}
+.modal_open dl{
+	margin: 12px 12px;
+}
+.modal_open dt{
+	float: left;
+}
+.modal_open dd{
+	float: left;
+	padding-left: 5px;
+}
+.modal_open dd span{
+	line-height: 23px;
+}
+.modal_open img{
+	width: 44px;
+	height: 44px;
+}
+
+
+
+/*  */
+
+
+.layui-layer-dialog .layui-layer-content{
+	padding: 30px !important;
+}
